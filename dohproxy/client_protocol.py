@@ -123,6 +123,7 @@ class StubServerProtocol:
         headers.extend([
             ('content-length', str(len(body))),
         ])
+        self.logger.debug('Complete Request Headers: {}'.format(headers))
         # Start request with headers
         # FIXME: Find a better way to close old streams. See GH#11
         try:
